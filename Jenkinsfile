@@ -1,1 +1,3 @@
-executeScript("script.groovy")
+node {
+   echo 'Hello World'
+}
