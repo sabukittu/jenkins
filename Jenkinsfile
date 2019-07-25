@@ -1,1 +1,1 @@
-echo 'Heool World'
+script "script.groovy"
