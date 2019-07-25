@@ -1,1 +1,1 @@
-executeScript("script.groovy")
+executeScript("jenkins/script.groovy")
