@@ -1,1 +1,1 @@
-executeScript(script.groovy)
+executeScript("script.groovy")
