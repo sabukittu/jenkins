@@ -1,1 +1,1 @@
-executeScript("jenkins/script.groovy")
+echo 'Heool World'
