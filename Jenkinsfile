@@ -1,1 +1,3 @@
-script "script.groovy"
+node {
+   sh echo 'Hello World'
+}
