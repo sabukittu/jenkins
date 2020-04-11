@@ -36,4 +36,4 @@ cd jenkins
 chown centos:docker -R /jenkins
 docker-compose up -d jenkins
 sleep 300
-aws s3 cp /jenkins/master/secrets/initialAdminPassword s3://backup-noobies/jenkins/
+aws s3 cp /jenkins/master/secrets/initialAdminPassword s3://backup-noobies/jenkins/initialAdminPassword.txt
