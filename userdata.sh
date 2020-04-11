@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yum update -y && \
+yum update -y
 yum install -y \
 	vim \
 	wget \
@@ -16,8 +16,6 @@ curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compo
 chmod +x /usr/local/sbin/docker-compose
 
 mkdir -p /jenkins/master
-chown centos:docker -R /jenkins
-
 fdisk /dev/xvdb <<EOF
 n
 p
@@ -35,4 +33,7 @@ cd /jenkins
 git clone --branch dev https://github.com/sabukittu/jenkins.git
 cd jenkins
 
+chown centos:docker -R /jenkins
 docker-compose up -d jenkins
+sleep 300
+aws s3 cp /jenkins/master/secrets/initialAdminPassword s3://backup-noobies/jenkins/
