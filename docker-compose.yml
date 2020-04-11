@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - "/jenkins/jenkins_master:/var/jenkins_home"
+      - "/jenkins/master:/var/jenkins_home"
     networks:
       - net
   jenkins-slave:

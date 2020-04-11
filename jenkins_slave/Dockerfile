@@ -6,7 +6,7 @@ RUN yum update -y \
 	&& yum install -y java \
 		openssh-server \
 		git \
-	&& groupadd -g 990 docker  \
+	&& groupadd -g 1050 docker  \
 	&& useradd -u 1000 -G docker jenkins \
 	&& echo 'redhat@123' | passwd --stdin jenkins \
 	&& mkdir -p /var/jenkins_home \
